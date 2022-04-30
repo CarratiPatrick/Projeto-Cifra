@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Cifra</title>
+</head>
+<body>
+    <header><h1>Criptografia de César ou Base64</h1></header>
+    <div class="conteiner" id="conteinerPai">
+        <div id="caixa">
+            <h1>Selecione o tipo de Criptografia</h1>
+           <select id="escolha">
+               <option value="0">Qual o método</option>
+               <option value="1" id="cesar">Cifra de César</option>
+               <option value="2" id="base64">Base 64 </option>
+           </select>
+           <form id="form">
+              <div id="cifraCesar">
+                  <p>codificar ou decodificar?</p>
+                <div>
+                    <input type="radio" name="coDec" label="cod" checked class="rad">
+                    <label for="radio">Codificar</label>
+                </div>
+                <div>
+                    <input type="radio" name="coDec" label="decod" class="rad">
+                    <label for="radio">Decodificar</label>
+                </div>
+                <div id="incremento">
+                    <label for="incre">Qual o valor de 1 a 25?</label>
+                    <input type="number" id="chaveInc" value="1" min="1" max="25" >
+                </div>
+                <div class="mensagem">
+                    <p>Sua Mensagem</p>
+                    <textarea id="entrada"></textarea>
+                </div>
+                <div class="mensagem2">
+                    <P id="msg">Sua Criptografia</P>
+                    <textarea readonly id="saida" ></textarea>
+                </div>
+              </div> 
+              <div id="base64">
+                <p>codificar ou decodificar?</p>
+                <div>
+                    <input type="radio" name="coDec" label="cod" class="rad2">
+                    <label for="radio">Codificar</label>
+                </div>
+                <div>
+                    <input type="radio" name="coDec" label="decod" class="rad2">
+                    <label for="radio">Decodificar</label>
+                </div>
+                <div class="mensagem">
+                    <p>Sua Mensagem</p>
+                    <textarea id="entrada2"></textarea>
+                </div>
+                <div class="mensagem2">
+                    <P id="msg2">Sua Criptografia</P>
+                    <textarea readonly id="saida2" ></textarea>
+                </div>          
+                
+
+              </div>
+           </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
